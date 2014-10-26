@@ -1,0 +1,20 @@
+/* SyncFile settings */
+
+{
+// Source dest locations and paired with each other by suffix number
+// Please set up at least one pair of source/dest before using Sync file
+	"sf_source_1" : "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SyncFile",
+	"sf_dest_1" : "D:\\GitHub",
+
+	"sf_source_2" : "",
+	"sf_dest_2" : "",
+
+	"sf_source_3" : "",
+	"sf_dest_3" : "",
+
+	"sf_source_4" : "",
+	"sf_dest_4" : "",
+
+	"sf_source_5" : "",
+	"sf_dest_5" : "",
+}
