@@ -1,0 +1,10 @@
+[
+    {
+        "id": "edit",
+        "children":
+        [
+            {"id": "sync"},
+            { "command": "sync_file" }
+        ]
+    }
+]
