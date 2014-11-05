@@ -2,21 +2,33 @@
 
 {
 //
-// Source dest locations and paired with each other by suffix number
+// Source dest locations and paired with each other
 // Please set up at least one pair of source/dest before using Sync file
-// Will include all its sub folders
-	"sf_source_1" : "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SyncFile",
-	"sf_dest_1" : "D:\\GitHub",
+// The directories will auto-include all its sub folders
+//
+// 
+// e.g.
+//
+//"mappings": [
+//        {
+//            "source": "example/source/path",
+//           "dest": "the/dest/path",
+//        },
+//        {
+//            "source": "example/source/path2",
+//            "dest": "second/dest/path",
+//        }
+//    ]
+// Can add as many pairs of directories as you want
 
-	"sf_source_2" : "",
-	"sf_dest_2" : "",
-
-	"sf_source_3" : "",
-	"sf_dest_3" : "",
-
-	"sf_source_4" : "",
-	"sf_dest_4" : "",
-
-	"sf_source_5" : "",
-	"sf_dest_5" : "",
+	"mappings": [
+        {
+            "source": "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SyncFile",
+            "dest": "D:\\GitHub",
+        },
+        {
+            "source": "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SalesforceLogs",
+            "dest": "D:\\Github2\\SFLogViewer",
+        }
+    ]
 }
