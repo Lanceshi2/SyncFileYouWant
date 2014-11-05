@@ -3,7 +3,7 @@ import sublime
 import sublime_plugin
 
 class SyncFileCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    def run(self, edit, inputFile=None):
         settings = sublime.load_settings('SyncFile.sublime-settings')
         src_mappings = settings.get("mappings", [])
         mappings = []
@@ -37,8 +37,11 @@ class SyncFileCommand(sublime_plugin.TextCommand):
         if not mappings:
             print("No valid mappings found")
             return
-
-        source_name = self.view.file_name()
+        
+        if inputFile == None:
+            source_name = self.view.file_name()
+        else:
+            source_name = inputFile
 
         for mapping in mappings:
             if mapping['source'] in source_name and mapping['dest'] != None and mapping['dest'] != "":
@@ -49,3 +52,9 @@ class SyncFileCommand(sublime_plugin.TextCommand):
             msg += 'or the relevant dest location is empty. '
             msg += 'Please set the settings file properly and retry.'
             sublime.error_message(msg)
+
+class SyncWindowFileCommand(sublime_plugin.WindowCommand):
+    def run(self, files):
+        if files != None and type(files) is list and len(files) > 0:
+            for f in files:
+                self.window.active_view().run_command('sync_file', {'inputFile': f })
