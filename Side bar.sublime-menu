@@ -1,7 +1,7 @@
 [
 	{  
-	    "id": "SyncFile",
 	    "caption": "Sync File",  
-	    "command": "sync_file"
+	    "command": "sync_multiple_file",
+	    "args": {"files": []}
 	 }
 ]

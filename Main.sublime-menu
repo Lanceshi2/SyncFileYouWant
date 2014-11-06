@@ -1,10 +1,13 @@
 [
     {
-        "id": "edit",
+        "id": "tools",
         "children":
         [
-            {"id": "sync"},
-            { "command": "sync_file" }
+            {
+            	"caption": "Sync File",
+                "command": "sync_file" 
+            },
+            { "caption": "-" }
         ]
     }
 ]

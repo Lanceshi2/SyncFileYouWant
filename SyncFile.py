@@ -53,7 +53,7 @@ class SyncFileCommand(sublime_plugin.TextCommand):
             msg += 'Please set the settings file properly and retry.'
             sublime.error_message(msg)
 
-class SyncWindowFileCommand(sublime_plugin.WindowCommand):
+class SyncMultipleFileCommand(sublime_plugin.WindowCommand):
     def run(self, files):
         if files != None and type(files) is list and len(files) > 0:
             for f in files:

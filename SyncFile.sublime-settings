@@ -23,12 +23,12 @@
 
 	"mappings": [
         {
-            "source": "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SyncFile",
-            "dest": "D:\\GitHub",
+            "source": "C:\\sample\\location",
+            "dest": "D:\\sample\\dest",
         },
         {
-            "source": "C:\\Users\\Lance\\AppData\\Roaming\\Sublime Text 3\\Packages\\SalesforceLogs",
-            "dest": "D:\\Github2\\SFLogViewer",
+            "source": "C:\\sample2",
+            "dest": "D:\\dest2",
         }
     ]
 }
