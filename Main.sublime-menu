@@ -5,9 +5,59 @@
         [
             {
             	"caption": "Sync File",
-                "command": "sync_file" 
+            	"children" :
+            	[
+		            { 
+		            	"caption": "Sync File", 
+		                "command": "sync_file" 
+		            },
+		            {
+			            "caption": "Read Me",
+			            "command": "open_file",
+			            "args": {
+			                "file": "${packages}/SyncFile/README.md"
+			            }
+		            },
+		            { "caption": "-" }
+		        ]
             },
             { "caption": "-" }
         ]
-    }
+
+    },
+    {
+	    "id": "preferences",
+	    "mnemonic": "n",
+	    "children": 
+	    [
+		    {
+		        "caption": "Package Settings",
+		        "mnemonic": "p",
+		        "id": "package-settings",
+		        "children": [
+			        {
+			            "caption": "SyncFile",
+			            "children": [
+			            {
+			                "caption": "Settings - Default",
+			                "command": "open_file",
+			                "args": {
+			                    "file": "${packages}/SyncFile/SyncFile.sublime-settings"
+			                }
+			            },
+			            {
+			                "caption": "Settings - User",
+			                "command": "open_file",
+			                "args": {
+			                    "file": "${packages}/User/SyncFile.sublime-settings"
+			                }
+			            },
+			            { "caption": "-" }
+			            ]
+			        }
+		        ]
+		    }
+	    ]
+  }
 ]
+
