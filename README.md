@@ -4,6 +4,8 @@ A Sublime Text plugin that enables syncing files between two folders. This is in
 
 Although we already have tools like FileSync which automatically sync two folders, I do find there are situations where though two directories are quite the same, we still want to keep some files identical due to version/experiment considerations. So I introduced this relatively manual way to sync files between two folders where you can decide which files you want to sync. 
 
+I don't see any reason it can't be used in ST2 or other OSes. But I have only tested it on ST3 and Windows. 
+
 To enable using Sync file, you need to first config your source and dest locations at:
 Preferences > Package Settings > SyncFileYouWant > Settings - User. 
 
