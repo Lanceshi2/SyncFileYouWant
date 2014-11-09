@@ -2,10 +2,10 @@ Sync File is now installed
 =============================
 
 To enable using Sync file, you need to first config your source and dest locations at:
-Preferences > Package Settings > Sync File > Settings - User. 
+Preferences > Package Settings > SyncFileYouWant > Settings - User. 
 
 I recommend you copy the settings file template from:
-Preferences > Package Settings > Sync File > Settings - Default
+Preferences > Package Settings > SyncFileYouWant > Settings - Default
 
 And add your source and dest locations based on that template. 
 
@@ -13,7 +13,7 @@ Source and dest locations will automatically include all their sub-folders.
 
 To sync a file to dest location, simply click Ctrl + Alt + S at the file you want to sync.
 
-Alternatively, you can click Tools >  Sync File > Sync File
+Alternatively, you can click Tools >  SyncFileYouWant > Sync File
 
 To sync multiple files, at side bar, choose multiple files, right click > Sync File
 

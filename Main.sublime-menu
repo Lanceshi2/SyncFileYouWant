@@ -4,7 +4,7 @@
         "children":
         [
             {
-            	"caption": "Sync File",
+            	"caption": "SyncFileYouWant",
             	"children" :
             	[
 		            { 
@@ -15,7 +15,7 @@
 			            "caption": "Read Me",
 			            "command": "open_file",
 			            "args": {
-			                "file": "${packages}/SyncFile/README.md"
+			                "file": "${packages}/SyncFileYouWant/README.md"
 			            }
 		            },
 		            { "caption": "-" }
@@ -36,23 +36,23 @@
 		        "id": "package-settings",
 		        "children": [
 			        {
-			            "caption": "SyncFile",
+			            "caption": "SyncFileYouWant",
 			            "children": [
-			            {
-			                "caption": "Settings - Default",
-			                "command": "open_file",
-			                "args": {
-			                    "file": "${packages}/SyncFile/SyncFile.sublime-settings"
-			                }
-			            },
-			            {
-			                "caption": "Settings - User",
-			                "command": "open_file",
-			                "args": {
-			                    "file": "${packages}/User/SyncFile.sublime-settings"
-			                }
-			            },
-			            { "caption": "-" }
+				            {
+				                "caption": "Settings - Default",
+				                "command": "open_file",
+				                "args": {
+				                    "file": "${packages}/SyncFileYouWant/SyncFile.sublime-settings"
+				                }
+				            },
+				            {
+				                "caption": "Settings - User",
+				                "command": "open_file",
+				                "args": {
+				                    "file": "${packages}/User/SyncFile.sublime-settings"
+				                }
+				            },
+				            { "caption": "-" }
 			            ]
 			        }
 		        ]

@@ -1,4 +1,4 @@
-/* SyncFile settings */
+/* SyncFileYouWant settings */
 
 {
 //
@@ -15,20 +15,16 @@
 //           "dest": "the/dest/path",
 //        },
 //        {
-//            "source": "example/source/path2",
-//            "dest": "second/dest/path",
+//            "source": "c:\\example\\source\\path2",
+//            "dest": "d:\\second\\dest\\path",
 //        }
 //    ]
 // Can add as many pairs of directories as you want
 
 	"mappings": [
         {
-            "source": "C:\\sample\\location",
-            "dest": "D:\\sample\\dest",
-        },
-        {
-            "source": "C:\\sample2",
-            "dest": "D:\\dest2",
+            "source": "",
+            "dest": "",
         }
     ]
 }

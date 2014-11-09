@@ -44,7 +44,7 @@ class SyncFileCommand(sublime_plugin.TextCommand):
             source_name = inputFile
 
         for mapping in mappings:
-            if mapping['source'] in source_name and mapping['dest'] != None and mapping['dest'] != "":
+            if mapping['source'] in source_name:
                 shutil.copyfile(source_name, source_name.replace(mapping['source'], mapping['dest']))
                 return
         else:
@@ -55,6 +55,6 @@ class SyncFileCommand(sublime_plugin.TextCommand):
 
 class SyncMultipleFileCommand(sublime_plugin.WindowCommand):
     def run(self, files):
-        if files != None and type(files) is list and len(files) > 0:
+        if files != None and isinstance(files, list) and len(files) > 0:
             for f in files:
                 self.window.active_view().run_command('sync_file', {'inputFile': f })
