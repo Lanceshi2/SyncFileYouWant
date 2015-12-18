@@ -6,6 +6,7 @@ import difflib
 
 sbs_markedSelection = [ '', '' ]
 sbs_files = []
+
  
 class SyncFileCommand(sublime_plugin.TextCommand):
     def run(self, edit, inputFile=None):
@@ -63,6 +64,61 @@ class SyncMultipleFileCommand(sublime_plugin.WindowCommand):
         if files != None and isinstance(files, list) and len(files) > 0:
             for f in files:
                 self.window.active_view().run_command('sync_file', {'inputFile': f })
+
+class DiffWithMeldCommand(sublime_plugin.TextCommand):
+    def run(self, files):
+        settings = sublime.load_settings('SyncFile.sublime-settings')
+        src_mappings = settings.get("mappings", [])
+        meld_cmd = settings.get("meldLocation")
+        if meld_cmd == None:
+            meld_cmd = "C:\\Program Files (x86)\\Meld\\meld\\meld"
+        mappings = []
+
+        # Check if we have the correct value type
+        if not isinstance(src_mappings, list): 
+            print("invalid value type, should be a list: %r" % src_mappings)
+            return
+        for mapping in src_mappings:
+            
+            # Check if we have the correct value types for the mappings
+            if not isinstance(mapping, dict):
+                print("invalid mapping type, should be a dict: %r" % mapping)
+                continue
+            # Check if required keys exist
+            elif not all(name in mapping for name in ('source', 'dest')):
+                print("required key(s) missing: %r" % mapping)
+                continue
+            # Check if required keys have correct value type
+            elif not isinstance(mapping['source'], str) or not isinstance(mapping['dest'], str):
+                print("invalid type for required key(s), should be str: %r" % mapping)
+                continue
+            # Check if required keys are not empty
+            elif not mapping['source'] or not mapping['dest']:
+                print("required key(s) empty: %r" % mapping)
+                continue
+            else:
+                mappings.append(mapping)
+
+        # Check if there are valid mappings
+        if not mappings:
+            print("No valid mappings found")
+            return
+
+        source_name = self.view.file_name()
+
+        for mapping in mappings:
+            if mapping['source'] in source_name:
+                dest_name = source_name.replace(mapping['source'], mapping['dest'])
+                source_name = os.path.abspath(source_name)
+                dest_name = os.path.abspath(dest_name)
+                print('"%s" "%s" "%s"' %(meld_cmd, source_name, dest_name))
+                os.system('""%s" "%s" "%s""' %(meld_cmd, source_name, dest_name))
+                return
+        else:
+            msg = 'Your current file location is not in one of your source locations '
+            msg += 'or the relevant dest location is empty. '
+            msg += 'Please set the settings file properly and retry.'
+            sublime.error_message(msg)
 
 class DiffFileCommand(sublime_plugin.TextCommand):
     def run(self, edit):

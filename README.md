@@ -8,6 +8,7 @@ I don't see any reason it can't be used in ST2 or other OSes. But I have only te
 
 ## Update ##
 Added diff functionality. Now you can press ctrl + alt + d to see the diff of source and destination files before syncing. 
+Added integration with Meld merge. To use this functionality, you need to install Meld first. The default meld location is C:\\Program Files (x86)\\Meld\\meld\\meld (including meld file) . You can modify the location in the settings file. 
 
 ## Usage ##
 
@@ -23,9 +24,11 @@ Source and dest locations will automatically include all their sub-folders.
 
 To sync a file, simply press ctrl + alt + s at the file you want to sync.
 
+Or Alternatively, you can click Tools >  SyncFileYouWant > Sync File. 
+
 To see the differences between two files, press ctrl + alt + d at the file. 
 
-Alternatively, you can click Tools >  SyncFileYouWant > Sync File and Tools > SyncFileYouWant > Diff File
+To use Meld to do merging, press ctrl + alt + m.
 
 To sync multiple files, at side bar, choose multiple files, right click > Sync File
 

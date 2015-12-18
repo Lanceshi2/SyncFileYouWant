@@ -15,6 +15,10 @@
 		            	"caption": "Diff File", 
 		                "command": "diff_file" 
 		            },
+		            { 
+		            	"caption": "Merge File with Meld", 
+		                "command": "diff_with_meld" 
+		            },
 		            {
 			            "caption": "Read Me",
 			            "command": "open_file",

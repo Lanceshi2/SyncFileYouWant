@@ -8,7 +8,7 @@
 //
 // 
 // e.g.
-//
+// 
 //"mappings": [
 //        {
 //            "source": "example/source/path",
@@ -26,5 +26,6 @@
             "source": "",
             "dest": "",
         }
-    ]
+    ],
+    "meldLocation": "C:\\Program Files (x86)\\Meld\\meld"
 }
