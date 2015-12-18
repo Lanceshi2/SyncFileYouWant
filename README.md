@@ -6,6 +6,11 @@ Although we already have tools like FileSync which automatically sync two folder
 
 I don't see any reason it can't be used in ST2 or other OSes. But I have only tested it on ST3 and Windows. 
 
+## Update ##
+Added diff functionality. Now you can press ctrl + alt + d to see the diff of source and destination files before syncing. 
+
+## Usage ##
+
 To enable using Sync file, you need to first config your source and dest locations at:
 Preferences > Package Settings > SyncFileYouWant > Settings - User. 
 
@@ -18,7 +23,9 @@ Source and dest locations will automatically include all their sub-folders.
 
 To sync a file, simply press ctrl + alt + s at the file you want to sync.
 
-Alternatively, you can click Tools >  SyncFileYouWant > Sync File
+To see the differences between two files, press ctrl + alt + d at the file. 
+
+Alternatively, you can click Tools >  SyncFileYouWant > Sync File and Tools > SyncFileYouWant > Diff File
 
 To sync multiple files, at side bar, choose multiple files, right click > Sync File
 
@@ -41,3 +48,6 @@ Go to your Sublime Text "Packages" directory (`Preferences` / `Browse Packages..
 Then clone this GitHub repository:
 
     $ git clone https://github.com/Lanceshi2/SyncFileYouWant.git "Sync File"
+
+## License ##
+MIT
