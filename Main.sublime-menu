@@ -11,6 +11,10 @@
 		            	"caption": "Sync File", 
 		                "command": "sync_file" 
 		            },
+		            { 
+		            	"caption": "Diff File", 
+		                "command": "diff_file" 
+		            },
 		            {
 			            "caption": "Read Me",
 			            "command": "open_file",
