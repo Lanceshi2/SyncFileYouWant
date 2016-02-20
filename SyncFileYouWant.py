@@ -49,10 +49,14 @@ class SyncFileCommand(sublime_plugin.TextCommand):
         else:
             source_name = inputFile
 
+        found = False
         for mapping in mappings:
             if mapping['source'] in source_name:
                 shutil.copyfile(source_name, source_name.replace(mapping['source'], mapping['dest']))
-                return
+                found = True
+        
+        if found
+            return
         else:
             msg = 'Your current file location is not in one of your source locations '
             msg += 'or the relevant dest location is empty. '

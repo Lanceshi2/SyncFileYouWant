@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+alt+s"], "command": "sync_file" },
+	{ "keys": ["ctrl+alt+d"], "command": "diff_file" },
+	{ "keys": ["ctrl+alt+m"], "command": "diff_with_meld" }
+]
