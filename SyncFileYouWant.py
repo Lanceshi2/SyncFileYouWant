@@ -55,7 +55,7 @@ class SyncFileCommand(sublime_plugin.TextCommand):
                 shutil.copyfile(source_name, source_name.replace(mapping['source'], mapping['dest']))
                 found = True
         
-        if found
+        if found == True
             return
         else:
             msg = 'Your current file location is not in one of your source locations '
