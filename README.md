@@ -30,6 +30,8 @@ To see the differences between two files, press ctrl + alt + d at the file.
 
 To use Meld to do merging, press ctrl + alt + m.
 
+Or run commands from command palette: print `SyncFile: Sync File`, `SyncFile: Diff File` or `SyncFile: Diff With Meld`.
+
 To sync multiple files, at side bar, choose multiple files, right click > Sync File
 
 Works with Sublime Text 3 (Stable version)
